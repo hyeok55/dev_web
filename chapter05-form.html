@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<!-- html version -->
+
+<html lang ="ko"> 
+    <head>
+<!-- html language selection -->
+    <title>form tag 실습</title>
+    </head>
+
+    <body>
+        <!-- 결과를 받을 수 있는 html -->
+        <form action="chapter05-form-result.html", method='get'>
+            <!-- focus to useraname, id는 고유한 식별자 -->
+            <label for ="username">아이디</label>
+            <input id="username" name="id" type="text" placeholder="아이디를 입력해줘">
+
+            <label for="phonenum">폰번호</label>
+            <input id="phonenum" type="tel" placeholder="번호">
+            
+            <!-- id를 놓기 힘들 때 label 태그 작성법 -->
+            <label>
+                비밀번호
+                <input name="password" type="password">
+            </label>
+            
+            <label for="opt">옵션선택</label>
+            <select id="opt" name="opt" required> 
+                <option value="">선택하세요</option>
+                <!-- value를 비워둠으로서 아무것도 전송 되어지지 않음 -->
+                <option value="옵션2값">옵션2</option>
+                <option>옵션3</option>
+                <option>옵션4</option>
+                <option>옵션5</option>
+            </select>
+            <!-- select에서 option의 value로 지정하지 않으면 텍스트가 value로 -->
+
+
+            <input id='agree' type="checkbox" value="checked" name="checkbox">
+            <label for="agree">약관에 동의합니다.</label>
+
+            <!-- radio buttion 같은 경우는 name이 중요하다 name을 같게 지정해주어야 선택할 수 있음 -->
+            <input type="radio" name="number" value="1">1
+            <input type="radio" name="number" value="2">2
+            <input type="radio" name="number" value="3">3
+            <input type="radio" name="number" value="4">4
+
+
+            <input type="file">
+
+            <input type="button" value = "버튼">
+            <!-- 아래와 같은 상황을 막기 위해서 다른 기능을 추가하기 위해서 input type을 사용 -->
+            <!-- 버튼의 type을 정하지 않으면 default는 submit -->
+            
+
+            <input type="hidden" name="where" value="samplecode">
+            <!-- 전송 이후 sample code에서 로그인이 일어났다 라는 것을 알려줄 수 있음-->
+            <!-- 개발자 도구에서 확인 -->
+            <button type="submit">전송!</button>
+
+            <textarea name="" id="" cols="30" rows="10">안녕하세여.</textarea>
+
+        </form>
+    </body>
+
+</html>
